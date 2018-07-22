@@ -21,10 +21,14 @@ Vagrant.configure("2") do |config|
     # miniconda: start installation process
     bash miniconda.sh -b -f -p /opt/conda
 
-    # miniconda: link path
-    echo 'PATH=/opt/conda/bin:$PATH' >> .profile
-
     # miniconda: cleanup
     rm miniconda.sh
+
+    # miniconda: link path
+    echo 'PATH=/opt/conda/bin:$PATH' >> .profile
+    source .profile
+
+    # miniconda: update to lastest version version of conda
+    conda install --yes conda
   SHELL
 end

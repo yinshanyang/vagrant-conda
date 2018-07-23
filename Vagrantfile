@@ -2,8 +2,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = 16384
-    vb.cpus = 3
+    vb.memory = 6144 
+    vb.cpus = 2
   end
 
   # user: root
